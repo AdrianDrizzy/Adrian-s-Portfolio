@@ -233,6 +233,7 @@
   }
   .header-content .right-header .name {
     font-size: 3rem;
+    display: block;
   }
   .header-content .right-header .name span {
     color: var(--color-secondary);
