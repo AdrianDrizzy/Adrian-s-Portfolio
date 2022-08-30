@@ -230,13 +230,17 @@
     flex-direction: column;
     justify-content: center;
     padding-right: 18rem;
+    
   }
   .header-content .right-header .name {
+    display: inline-block;
     font-size: 3rem;
-    display: block;
+    white-space: nowrap;
+    
   }
   .header-content .right-header .name span {
     color: var(--color-secondary);
+    
   }
   .header-content .right-header p {
     margin: 1.5rem 0;
