@@ -998,6 +998,44 @@
       padding-top: 3rem;
     }
   }
+  @media screen and (max-width: 768px) {
+    /* adjust grid template columns to stack elements vertically */
+    .header-content {
+      grid-template-columns: 1fr;
+    }
+  
+    /* reduce left-header margin and image size */
+    .header-content .left-header .image {
+      width: 40%;
+      margin-left: 1rem;
+    }
+  
+    /* reduce right-header padding */
+    .header-content .right-header {
+      padding: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* adjust clip path on left-header elements to fit smaller screens */
+    .header-content .left-header .h-shape {
+      clip-path: circle(30% at 50% 50%);
+    }
+  
+    .header-content .left-header .image {
+      clip-path: circle(38% at 50% 50%);
+    }
+  
+    /* adjust font size of name */
+    .header-content .right-header .name {
+      font-size: 2rem;
+    }
+  
+    /* adjust line height of paragraph */
+    .header-content .right-header p {
+      line-height: 1.5rem;
+    }
+  }
   @media screen and (max-width: 700px) {
     .container {
       padding: 7rem 3rem;
