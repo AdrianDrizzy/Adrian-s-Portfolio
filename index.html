@@ -15,7 +15,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            // Replace "YOUR_PUBLIC_KEY" with the Public Key from your EmailJS account dashboard
+            // Initialize EmailJS with your public key
             emailjs.init("F55z98qKXVNv5QcBt");
         })();
     </script>
@@ -305,15 +305,69 @@
             <div class="portfolios">
                 <div class="portfolio-item">
                     <div class="image">
+                        <img src="img/Bitou.jpg" alt="Bitou Municipality Website">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Bitou Municipality</h3>
+                        <div class="icons">
+                            <a href="https://www.bitou.gov.za/" class="icon" target="_blank" rel="noopener">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/Frost Freeze.jpg" alt="Frost Freeze Website">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Frost Freeze</h3>
+                        <div class="icons">
+                            <a href="https://frostfreeze.co.za/index.html" class="icon" target="_blank" rel="noopener">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/IceFlam.jpg" alt="IceFlam Website">
+                    </div>
+                    <div class="hover-items">
+                        <h3>IceFlam</h3>
+                        <div class="icons">
+                            <a href="https://www.iceflam.co.za/" class="icon" target="_blank" rel="noopener">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/Portfolio Website.jpg" alt="Adrian's Portfolio">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Portfolio Website</h3>
+                        <div class="icons">
+                            <a href="https://adrian-s-portfolio.vercel.app/index.html" class="icon" target="_blank" rel="noopener">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                            <a href="https://github.com/AdrianDrizzy/Adrian-s-Portfolio" class="icon" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
                         <img src="img/ImageGallery.png" alt="">
                     </div>
                     <div class="hover-items">
-                        <h3>Project Source</h3>
+                        <h3>Image Gallery</h3>
                         <div class="icons">
                             <a href="https://github.com/AdrianDrizzy/Image-Gallery" class="icon" target="_blank" rel="noopener">
                                 <i class="fab fa-github"></i>
                             </a>
-                        
                         </div>
                     </div>
                 </div>
@@ -322,12 +376,11 @@
                         <img src="img/PMCS.png" alt="">
                     </div>
                     <div class="hover-items">
-                        <h3>Project Source</h3>
+                        <h3>Product Management System</h3>
                         <div class="icons">
                             <a href="https://github.com/AdrianDrizzy/ProductManagementSystem-CRUD-ML" class="icon" target="_blank" rel="noopener">
                                 <i class="fab fa-github"></i>
                             </a>
-                          
                             <a href="https://www.youtube.com/watch?v=5MddWGOESJU&t=6s" class="icon" target="_blank" rel="noopener">
                                 <i class="fab fa-youtube"></i>
                             </a>
@@ -339,7 +392,7 @@
                         <img src="img/carpool.jpg" alt="">
                     </div>
                     <div class="hover-items">
-                        <h3>Project Source</h3>
+                        <h3>Commute App</h3>
                         <div class="icons">
                             <a href="https://github.com/AdrianDrizzy/Comute-" class="icon" target="_blank" rel="noopener">
                                 <i class="fab fa-github"></i>
@@ -352,7 +405,7 @@
                         <img src="img/dvd.jpeg" alt="">
                     </div>
                     <div class="hover-items">
-                        <h3>Project Source</h3>
+                        <h3>DVD Rental Application</h3>
                         <div class="icons">
                             <a href="https://github.com/AdrianDrizzy/DVD-Rental-Application" class="icon" target="_blank" rel="noopener">
                                 <i class="fab fa-github"></i>
@@ -497,33 +550,47 @@
             const subjectInput = document.getElementById('subject');
             const messageInput = document.getElementById('message');
             
+            // Validate form data
+            if (!nameInput.value || !emailInput.value || !subjectInput.value || !messageInput.value) {
+                document.getElementById('form-status').innerHTML = '<p style="color: red;">Please fill in all fields.</p>';
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value)) {
+                document.getElementById('form-status').innerHTML = '<p style="color: red;">Please enter a valid email address.</p>';
+                return;
+            }
+            
             // Prepare template parameters
             const templateParams = {
-                from_name: nameInput.value,
-                email_id: emailInput.value,
-                subject: subjectInput.value,
-                message: messageInput.value
+                from_name: nameInput.value.trim(),
+                email_id: emailInput.value.trim(),
+                subject: subjectInput.value.trim(),
+                message: messageInput.value.trim()
             };
             
             // Send email using EmailJS
-            // Replace 'YOUR_SERVICE_ID' with your actual service ID (e.g., 'service_abcdef')
-            // Replace 'YOUR_TEMPLATE_ID' with your actual template ID (e.g., 'template_xyz123')
-            emailjs.send('service_smka4zt', 'template_ufqu2tj', templateParams)
+            emailjs.send('service_smka4zt', 'template_ufqu2tj', templateParams, 'F55z98qKXVNv5QcBt')
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     document.getElementById('form-status').innerHTML = '<p style="color: var(--color-secondary);">Message sent successfully!</p>';
+                    
                     // Clear the form
                     nameInput.value = '';
                     emailInput.value = '';
                     subjectInput.value = '';
                     messageInput.value = '';
+                    
                     // Redirect to thanks page
                     setTimeout(function() {
                         window.location.href = "thanks.html";
                     }, 2000);
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    document.getElementById('form-status').innerHTML = '<p style="color: red;">Failed to send message. Please try again.</p>';
+                })
+                .catch(function(error) {
+                    console.error('FAILED...', error);
+                    document.getElementById('form-status').innerHTML = '<p style="color: red;">Failed to send message. Please try again later or contact me directly at mliloadrian17@gmail.com</p>';
                 });
         });
     </script>
