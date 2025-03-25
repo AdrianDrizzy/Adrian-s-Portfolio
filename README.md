@@ -1,41 +1,18 @@
-Website Portfolio
-Description
-This Website Portfolio is a personal project designed to showcase my skills and projects in web development. Built using HTML, CSS, and JavaScript, it serves as a dynamic and interactive way to present my work to potential employers, clients, and peers. The portfolio includes sections for an about me introduction, a list of projects with descriptions, and contact information.
+# 💫 About Me:
+Hi there 👋<br>I'm Adrian from South Africa. am a qualified and multifaceted developer with a strong foundation in software engineering and programming principles, developing full stack solutions using C# and ASP.NET Core in line with business requirements.<br><br>AREAS OF STRENGTH<br><br>➡ Full Stack Development - Front/Backend, web-based solutions, to meet business demand. ➡ Creative Problem Solving - Researching new technologies, learning on the go, providing efficient solutions, quickly. ➡ Systems Design - Creating highly reusable and scalable systems that provide real value to development efforts. ➡ Requirements Analysis - Understanding operational requirements and translating them to technical specifications. ➡ Teamwork - Using team synergy for innovative solutions and fixes, pioneering cutting edge business systems. ➡ Communication - Training, reporting and presenting complex concepts in simple terms.
 
-Features
-Responsive Design: Ensures the website is accessible and provides a seamless experience across various devices and screen sizes.
-Interactive Elements: Utilizes JavaScript to add interactivity, such as project sliders, modals for detailed project information, and a contact form.
-Portfolio Projects: Displays a curated list of projects, each with a thumbnail, title, brief description, and a link to view the project in detail.
-Contact Form: Allows visitors to easily get in touch via a simple form that validates input before submission.
-How to Use
-The website is designed to be intuitive and easy to navigate:
 
-Navigation Bar: Use the navigation bar at the top to jump to different sections of the portfolio.
-Projects: Click on any project thumbnail to view more information about that project.
-Contact: Scroll down to the contact section to find contact details or use the contact form to send a message directly from the website.
-Requirements
-To run this website locally, you will need:
+## 🌐 Socials:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/adrian-mlilo/) 
 
-A modern web browser (e.g., Chrome, Firefox, Safari).
-A local server environment (optional for development, like Live Server in Visual Studio Code).
-Installation
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/yourusername/website-portfolio.git
-Navigate to the project directory:
-bash
-Copy code
-cd website-portfolio
-Open the website:
-If using a local server, start your server within the directory and open the provided local URL in your browser.
-Otherwise, open the index.html file directly in your browser.
-Contributing
-Feel free to fork the repository, make changes, and submit pull requests if you have suggestions or improvements.
+# 💻 Tech Stack:
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Drupal](https://img.shields.io/badge/drupal-%230678BE.svg?style=for-the-badge&logo=drupal&logoColor=white) ![Esbuild](https://img.shields.io/badge/esbuild-%23FFCF00.svg?style=for-the-badge&logo=esbuild&logoColor=black) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=AdrianDrizzy&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=AdrianDrizzy&theme=dark&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=AdrianDrizzy&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
-License
-This project is open-sourced under the MIT License. See the LICENSE file for more details.
+---
+[![](https://visitcount.itsvg.in/api?id=AdrianDrizzy&icon=0&color=0)](https://visitcount.itsvg.in)
 
-Acknowledgments
-Icons and Images: Credits to FontAwesome and Unsplash for free icons and images.
-Inspiration: Thanks to various online resources and tutorials that inspired the design and functionality of this portfolio.
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
