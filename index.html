@@ -11,7 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Replace "YOUR_PUBLIC_KEY" with the Public Key from your EmailJS account dashboard
+            emailjs.init("F55z98qKXVNv5QcBt");
+        })();
+    </script>
 </head>
 <body class="main-content">
     <header class="section sec1 header active" id="home">
@@ -33,7 +40,7 @@
                     and managing applications to meet diverse business requirements.
                 </p>
                 <div class="btn-con">
-                    <a href="https://drive.google.com/file/d/1w0K_9BUpz2FiY_q4ObUGwOtby4iLO0Ds/view?usp=share_link" class="main-btn" target="_blank" rel="noopener">
+                    <a href="https://drive.google.com/file/d/1kP7TT0qEgmuf_K6eI0iifmODbpu_y0YN/view?usp=sharing" class="main-btn" target="_blank" rel="noopener">
                         <span class="btn-text">Download CV</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
@@ -392,7 +399,7 @@
                                     <span>Education</span>
                                 </div>
                                 <p>
-                                    <span>: University of Cape Town, Richfield</span>
+                                    <span>: University of Cape Town</span>
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -429,24 +436,25 @@
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form action="https://formsubmit.co/mliloadrian17@gmail.com" method="POST"> 
+                        <form id="contact-form"> 
                             <div class="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME" name="name">
-                                <input type="email" required placeholder="YOUR EMAIL" name="email">
+                                <input type="text" id="name" required placeholder="YOUR NAME" name="name">
+                                <input type="email" id="email" required placeholder="YOUR EMAIL" name="email">
                             </div>
                             <div class="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT" name="subject">
+                                <input type="text" id="subject" required placeholder="ENTER SUBJECT" name="subject">
                             </div>
                             <div class="input-control">
-                                <textarea name="Message" cols="15" rows="8" placeholder="Message Here..." ></textarea>
+                                <textarea id="message" name="message" cols="15" rows="8" placeholder="Message Here..." required></textarea>
                             </div> 
                             <div class="submit-btn">
                                 <input type="submit" value="Submit" class="send-btn">
-                                <a href="https://drive.google.com/file/d/1w0K_9BUpz2FiY_q4ObUGwOtby4iLO0Ds/view?usp=share_link" class="main-btn" target="_blank" rel="noopener">
+                                <a href="https://drive.google.com/file/d/1kP7TT0qEgmuf_K6eI0iifmODbpu_y0YN/view?usp=sharing" class="main-btn" target="_blank" rel="noopener">
                                     <span class="btn-text">Download CV</span>
                                     <span class="btn-icon"><i class="fas fa-download"></i></span>
                                 </a>
                             </div>
+                            <div id="form-status"></div>
                         </form>
                     </div>
                 </div>
@@ -475,5 +483,48 @@
         <i class="fas fa-adjust"></i>
     </div>
     <script src="styles/app.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Display sending status
+            document.getElementById('form-status').innerHTML = '<p style="color: var(--color-secondary);">Sending message...</p>';
+            
+            // Get form data
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            
+            // Prepare template parameters
+            const templateParams = {
+                from_name: nameInput.value,
+                email_id: emailInput.value,
+                subject: subjectInput.value,
+                message: messageInput.value
+            };
+            
+            // Send email using EmailJS
+            // Replace 'YOUR_SERVICE_ID' with your actual service ID (e.g., 'service_abcdef')
+            // Replace 'YOUR_TEMPLATE_ID' with your actual template ID (e.g., 'template_xyz123')
+            emailjs.send('service_smka4zt', 'template_ufqu2tj', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    document.getElementById('form-status').innerHTML = '<p style="color: var(--color-secondary);">Message sent successfully!</p>';
+                    // Clear the form
+                    nameInput.value = '';
+                    emailInput.value = '';
+                    subjectInput.value = '';
+                    messageInput.value = '';
+                    // Redirect to thanks page
+                    setTimeout(function() {
+                        window.location.href = "thanks.html";
+                    }, 2000);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    document.getElementById('form-status').innerHTML = '<p style="color: red;">Failed to send message. Please try again.</p>';
+                });
+        });
+    </script>
 </body>
 </html>
