@@ -2,615 +2,362 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrian Mlilo - Software Engineer</title>
-    
-    <!-- Favicon -->
+    <title>Adrian Mlilo | Full-Stack Software Engineer</title>
+    <meta name="description" content="Adrian Mlilo is a full-stack software engineer in Cape Town working in C#/.NET, Python and React. Projects include PharmaX, PhiNine, CoolConnect and BethRapha.">
+
     <link rel="icon" href="img/adrian.png" type="image/png">
-    <link rel="shortcut icon" href="img/adrian.png" type="image/png">
     <link rel="apple-touch-icon" href="img/adrian.png">
-    
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // Initialize EmailJS with your public key
-            emailjs.init("F55z98qKXVNv5QcBt");
+
+    <!-- Set the theme before paint so there is no flash -->
+    <script>
+        (function () {
+            var t = null;
+            try { t = localStorage.getItem('theme'); } catch (e) {}
+            if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.dataset.theme = t;
         })();
     </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js" defer></script>
+    <script src="styles/app.js" defer></script>
 </head>
-<body class="main-content">
-    <header class="section sec1 header active" id="home">
-        <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape"></div>
-                <div class="image">
-                    <img src="img/adrian.png" alt="">
-                </div>
-            </div>
-            <div class="right-header">
-                <h1 class="name">
-                    Hi, I'm <span>Adrian Mlilo.</span>      
-                    <br>A Software Engineer.
-                </h1>
-                <p>
-                    A qualified, multifaceted, and adaptable developer with a robust foundation in software engineering and programming principles. 
-                    Specializing in full-stack web solutions using C# and ASP.NET Core, with extensive experience in designing, coding, 
-                    and managing applications to meet diverse business requirements.
-                </p>
-                <div class="btn-con">
-                    <a href="https://drive.google.com/file/d/1kP7TT0qEgmuf_K6eI0iifmODbpu_y0YN/view?usp=sharing" class="main-btn" target="_blank" rel="noopener">
-                        <span class="btn-text">Download CV</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                </div>
-            </div>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap header-row">
+            <a href="#top" class="brand">Adrian Mlilo</a>
+            <nav aria-label="Main">
+                <ul class="nav">
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-btn" type="button" aria-label="Switch colour theme">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+                <span class="theme-text">Light mode</span>
+            </button>
         </div>
     </header>
-    
-       
-     <main>
-        <section class="section sec2 about" id="about">
-            <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
+
+    <main id="main">
+        <section class="hero" id="top">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <ol class="resolver" aria-label="DNS lookup for adrian.mlilo">
+                        <li class="hop"><span>adrian.mlilo</span></li>
+                        <li class="hop"><span>.za</span></li>
+                        <li class="hop"><span>cape town</span></li>
+                        <li class="hop hop-answer"><span>resolved</span></li>
+                    </ol>
+                    <h1>I build software that takes the paperwork off people's desks.</h1>
+                    <p class="lede">
+                        Full-stack engineer in Cape Town working in C#/.NET, Python and React.
+                        At GrandCom I automate client communications on Azure. At the University of Cape Town
+                        I research DNS security across Africa and train the people who defend it.
+                    </p>
+                    <div class="actions">
+                        <a href="#projects" class="btn btn-primary">See my projects</a>
+                        <a href="https://drive.google.com/file/d/1kP7TT0qEgmuf_K6eI0iifmODbpu_y0YN/view?usp=sharing" class="btn" target="_blank" rel="noopener">
+                            <i class="fas fa-download" aria-hidden="true"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+                <figure class="portrait">
+                    <img src="img/adrian.png" alt="Adrian Mlilo" width="420" height="420">
+                </figure>
             </div>
-            <div class="about-container">
-                <div class="left-about">
-                    <h4>Information About me</h4>
-                    <p>
-                        A qualified, multifaceted, and adaptable developer with a robust foundation in software engineering and programming principles. Specializing in full-stack web solutions using C# and ASP.NET Core, with extensive experience in designing, coding, and managing applications to meet diverse business requirements.
-<br>
-<br>AREAS OF STRENGTH<br>
+        </section>
 
-➡ Full Stack Development - Front/Backend, web-based solutions, to meet business demand.<br>
-➡ Creative Problem Solving - Researching new technologies, learning on the go, providing efficient solutions, quickly.<br>
-➡ Systems Design - Creating highly reusable and scalable systems that provide real value to development efforts.<br>
-➡ Requirements Analysis - Understanding operational requirements and translating them to technical specifications.<br>
-➡ Teamwork - Using team synergy for innovative solutions and fixes, pioneering cutting edge business systems.<br>
-➡ Communication - Training, reporting and presenting complex concepts in simple terms.<br>
+        <section class="section" id="projects" aria-labelledby="projects-title">
+            <div class="wrap">
+                <h2 id="projects-title">What I'm building</h2>
+                <p class="section-intro">Four products I started and run myself, from a pharmacy till to a trading engine.</p>
 
+                <article class="feature">
+                    <div class="feature-media">
+                        <img src="img/pharmax.png" alt="PharmaX home screen with tiles for selling, dispensing, stock and reports" width="1938" height="1038" loading="lazy">
+                    </div>
+                    <div class="feature-body">
+                        <h3>PharmaX</h3>
+                        <p class="feature-hook">Pharmacy software that keeps selling when the network drops.</p>
+                        <p>
+                            A Windows system for running a retail pharmacy: the till, the dispensary, medical aid claims,
+                            stock, suppliers, debtors, the books and reports. Each till runs on its own SQLite database and
+                            syncs to MariaDB on the main computer. Its assistant, Ask PharmaX, runs a small language model
+                            on the pharmacy's own computer, so it answers how-to questions and builds reports from plain
+                            words without any data leaving the building.
+                        </p>
+                        <ul class="tags" aria-label="Built with">
+                            <li>.NET 8</li><li>WinForms (MVP)</li><li>EF Core</li><li>SQLite + MariaDB</li><li>LLamaSharp</li>
+                        </ul>
+                        <p class="status"><i class="fas fa-lock" aria-hidden="true"></i> Private repository, in active development</p>
+                    </div>
+                </article>
 
-<br>AREAS OF INTEREST<br>
+                <article class="feature feature-flip">
+                    <div class="feature-media feature-art" aria-hidden="true">
+                        <div class="spiral">
+                            <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
+                            <span>20</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                            <span>19</span><span>6</span><span class="core">1</span><span>2</span><span>11</span>
+                            <span>18</span><span>5</span><span>4</span><span>3</span><span>12</span>
+                            <span>17</span><span>16</span><span>15</span><span>14</span><span>13</span>
+                        </div>
+                        <span class="phi">φ</span>
+                    </div>
+                    <div class="feature-body">
+                        <h3>PhiNine</h3>
+                        <p class="feature-hook">A 24/7 trading platform built on Fibonacci ratios and Gann's Square of Nine.</p>
+                        <p>
+                            A private platform for a pilot group of three traders. It connects to each trader's MetaTrader 5
+                            account, turns market analysis into trade setups and can place those trades automatically, but only
+                            inside strict risk limits. Every account starts in signals-only mode. Traders watch and control it
+                            from an installable Android web app and from Telegram.
+                        </p>
+                        <ul class="tags" aria-label="Built with">
+                            <li>Python 3.12</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>MetaTrader 5</li><li>HTMX</li>
+                        </ul>
+                        <p class="status"><i class="fas fa-lock" aria-hidden="true"></i> Private repository, in active development</p>
+                    </div>
+                </article>
 
-➡ Designing robust, scalable and reusable software solutions to complex business requirements.<br>
-➡ Building modular systems to create complex data ingress applications that create real value by supporting business intelligence.<br>
-➡ Game development using the Unity Engine.<br>
-                    </p>
-                  
-                </div>
+                <article class="feature">
+                    <div class="feature-media feature-art" aria-hidden="true">
+                        <ol class="flow">
+                            <li>Find businesses likely to need a repair</li>
+                            <li>Ask permission once, by email</li>
+                            <li>Qualify opted-in leads with an AI voice agent</li>
+                            <li>Book the job with a technician</li>
+                        </ol>
+                    </div>
+                    <div class="feature-body">
+                        <h3>CoolConnect Lead Engine</h3>
+                        <p class="feature-hook">Finds people whose fridge or aircon needs fixing, and asks before it calls.</p>
+                        <p>
+                            A lead engine for refrigeration and air-conditioning repairs. It discovers likely customers,
+                            sends a single permission request, qualifies the people who say yes with an AI voice agent and hands
+                            booked jobs to technician partners. POPIA rules live in the code and the database: consent is asked
+                            for once and never after a refusal, and consent records cannot be edited or deleted.
+                        </p>
+                        <ul class="tags" aria-label="Built with">
+                            <li>.NET 10</li><li>ASP.NET Core</li><li>EF Core</li><li>Azure SQL</li><li>Hangfire</li><li>Twilio</li>
+                        </ul>
+                        <p class="status"><i class="fas fa-lock" aria-hidden="true"></i> Private repository, in active development</p>
+                    </div>
+                </article>
+
+                <article class="feature feature-flip">
+                    <div class="feature-media">
+                        <img src="img/bethrapha.jpg" alt="BethRapha: plain answers for everyday life, with three guide covers" width="1200" height="630" loading="lazy">
+                    </div>
+                    <div class="feature-body">
+                        <h3>BethRapha</h3>
+                        <p class="feature-hook">An online shop for practical guides on health, faith, family and money.</p>
+                        <p>
+                            Readers preview the first pages of a guide for free, pay with EcoCash, OneMoney or card through Paynow,
+                            and download a PDF stamped with their name. It runs on ordinary PHP hosting with orders kept in SQLite,
+                            so there is no database server to look after, and it handles sign-in, promotion codes, daily backups
+                            and the admin pages itself.
+                        </p>
+                        <ul class="tags" aria-label="Built with">
+                            <li>PHP 8</li><li>SQLite</li><li>Paynow</li><li>Firebase Auth</li><li>PHPMailer</li>
+                        </ul>
+                        <p class="links">
+                            <a href="https://www.bethrapha.co.zw" target="_blank" rel="noopener"><i class="fas fa-globe-africa" aria-hidden="true"></i> Visit bethrapha.co.zw</a>
+                        </p>
+                    </div>
+                </article>
+
+                <h3 class="sub-title">Client websites</h3>
+                <ul class="sites">
+                    <li>
+                        <a href="https://mdkproductions.online/index.html" target="_blank" rel="noopener">
+                            <img src="img/MDKPRODUCTIONS.png" alt="" loading="lazy">
+                            <span class="site-name">MDK Productions</span>
+                            <span class="site-note">Production company site</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.bitou.gov.za/" target="_blank" rel="noopener">
+                            <img src="img/Bitou.png" alt="" loading="lazy">
+                            <span class="site-name">Bitou Municipality</span>
+                            <span class="site-note">Drupal 10. Traffic rose 30% in three months</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://frostfreeze.co.za/index.html" target="_blank" rel="noopener">
+                            <img src="img/Frost Freeze.png" alt="" loading="lazy">
+                            <span class="site-name">Frost Freeze</span>
+                            <span class="site-note">Refrigeration company site</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.iceflam.co.za/" target="_blank" rel="noopener">
+                            <img src="img/IceFlam.png" alt="" loading="lazy">
+                            <span class="site-name">IceFlam</span>
+                            <span class="site-note">Air-conditioning company site</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <h3 class="sub-title">Earlier work</h3>
+                <ul class="earlier">
+                    <li>
+                        <span class="earlier-name">Product Management System</span>
+                        <span class="earlier-note">C# CRUD app with a machine-learning model</span>
+                        <span class="earlier-links">
+                            <a href="https://github.com/AdrianDrizzy/ProductManagementSystem-CRUD-ML" target="_blank" rel="noopener" aria-label="Product Management System on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/watch?v=5MddWGOESJU&t=6s" target="_blank" rel="noopener" aria-label="Product Management System demo on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="earlier-name">Commute app</span>
+                        <span class="earlier-note">Car-pooling app on the ABP Framework</span>
+                        <span class="earlier-links"><a href="https://github.com/AdrianDrizzy/Comute-" target="_blank" rel="noopener" aria-label="Commute app on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></span>
+                    </li>
+                    <li>
+                        <span class="earlier-name">DVD Rental</span>
+                        <span class="earlier-note">C# Windows Forms application</span>
+                        <span class="earlier-links"><a href="https://github.com/AdrianDrizzy/DVD-Rental-Application" target="_blank" rel="noopener" aria-label="DVD Rental on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></span>
+                    </li>
+                    <li>
+                        <span class="earlier-name">Image Gallery</span>
+                        <span class="earlier-note">JavaScript gallery</span>
+                        <span class="earlier-links"><a href="https://github.com/AdrianDrizzy/Image-Gallery" target="_blank" rel="noopener" aria-label="Image Gallery on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></span>
+                    </li>
+                </ul>
             </div>
-            <div class="about-stats">
-                <h4 class="stat-title">My Skills</h4>
-                <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="prog-title">HTML5</p>
-                        <div class="progress-con">
-                            <p class="prog-text">90%</p>
-                            <div class="progress">
-                                <span class="html"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">CSS3</p>
-                        <div class="progress-con">
-                            <p class="prog-text">95%</p>
-                            <div class="progress">
-                                <span class="css"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">JavaScript</p>
-                        <div class="progress-con">
-                            <p class="prog-text">75%</p>
-                            <div class="progress">
-                                <span class="js"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">C# Programming</p>
-                        <div class="progress-con">
-                            <p class="prog-text">80%</p>
-                            <div class="progress">
-                                <span class="react"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">.NET 8</p>
-                        <div class="progress-con">
-                            <p class="prog-text">87%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">AzureDevOps</p>
-                        <div class="progress-con">
-                            <p class="prog-text">70%</p>
-                            <div class="progress">
-                                <span class="python"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Data Visualisation (Tableau)</p>
-                        <div class="progress-con">
-                            <p class="prog-text">65%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">React JS</p>
-                        <div class="progress-con">
-                            <p class="prog-text">65%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Drupal 9 & 10</p>
-                        <div class="progress-con">
-                            <p class="prog-text">70%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">SQL & Database Management</p>
-                        <div class="progress-con">
-                            <p class="prog-text">80%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">API</p>
-                        <div class="progress-con">
-                            <p class="prog-text">85%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="stat-title">My Work Experience</h4>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">July 2024 - Present</p>
-                    <h5>Software Developer (Contract)<span> - Grandcom, Cape Town</span></h5>
-                    <p>
-                        Designing, coding, testing, and managing various applications using C#, .NET, SQL, ReactJS, Next JS, API, Azure DevOps.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">May 2023 - June 2024</p>
-                    <h5>Information Technology Lecturer<span> - Richfield, Cape Town</span></h5>
-                    <p>
-                        Lecturing Mobile App Development (Android), Python, C++, AI, Machine Learning, Databases, Mathematics.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">January 2023 - July 2023</p>
-                    <h5>Web Developer<span> - African Ideas Pty Ltd</span></h5>
-                    <p>
-                        Created a new website for Bitou Municipality using Drupal 10. Successfully passed the Microsoft PL-600 Certification.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">July 2022 - December 2022</p>
-                    <h5>Full Stack Developer<span> - Freelance</span></h5>
-                    <p>
-                        Developed and deployed responsive web applications using JavaScript, React, C#, .NET, and API integration.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">January 2021 - November 2022</p>
-                    <h5>IT Tutor<span> - University of Cape Town</span></h5>
-                    <p>
-                        Commercial Programming Tutor (INF1003F) Level 2 Course (C#) & System Development Project 1 Tutor (INF3003W) Level 3 Course (.Net)
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">June 2022 - July 2022</p>
-                    <h5>Software Engineer Intern<span> - Cogent</span></h5>
-                    <p>
-                        Developing web applications using C#, .NET, SQL, ABP Framework, Azure DevOps.
-                    </p>
-                </div>
-            </div>
+        </section>
 
-            <h4 class="stat-title">My Education</h4>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <p class="tl-duration">February 2025 - November 2026 (Current)</p>
-                    <h5>Master's Degree in Information Systems<span> - University of Cape Town</span></h5>
-                    <p>
-                        Research will focus on AI-Driven Cybersecurity Strategies for South African Universities.
+        <section class="section" id="experience" aria-labelledby="experience-title">
+            <div class="wrap two-col">
+                <div>
+                    <h2 id="experience-title">Experience</h2>
+                    <p class="section-intro">
+                        I like working out why a process runs the way it does, then turning it into software people can rely on.
+                        Lecturing taught me to explain it clearly.
                     </p>
                 </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-user-graduate"></i>
+                <ol class="timeline">
+                    <li>
+                        <p class="when">Jul 2024 to now</p>
+                        <h3>Software Developer, GrandCom</h3>
+                        <p>Build C#/.NET 8 Azure Functions that automate communications processing, the logic that picks HTML email templates for each client, and React/Next.js features. Write reporting SQL and debug document-generation pipelines in Azure DevOps.</p>
+                    </li>
+                    <li>
+                        <p class="when">Jul 2025 to now</p>
+                        <h3>Research Assistant and Junior Trainer, UCT C3SA</h3>
+                        <p>Research DNS abuse and resilience in African internet infrastructure, build DNS monitoring prototypes in C#, ASP.NET Core and SQL, co-author research briefs, and deliver cybersecurity training.</p>
+                    </li>
+                    <li>
+                        <p class="when">Jul 2025 to Oct 2025</p>
+                        <h3>Subject Matter Expert, C# Development, LearningMate</h3>
+                        <p>Designed and reviewed a C# application-development curriculum, and advised on .NET architecture, object-oriented design and secure API integration.</p>
+                    </li>
+                    <li>
+                        <p class="when">May 2023 to Jun 2024</p>
+                        <h3>IT Lecturer, Richfield</h3>
+                        <p>Gave more than 100 lectures in databases, mobile apps, Python, C++, AI and machine learning, with a 95% student satisfaction rating. Ran an Advanced Excel programme for executive education.</p>
+                    </li>
+                    <li>
+                        <p class="when">Jan 2023 to Jul 2023</p>
+                        <h3>Web Developer, African Ideas</h3>
+                        <p>Built the Bitou Municipality website in Drupal 10, where traffic rose 30% in three months. Passed Microsoft PL-600 and built a Power App that saved a client about 10 hours of manual work a month.</p>
+                    </li>
+                    <li>
+                        <p class="when">Jul 2022 to Jan 2023</p>
+                        <h3>Full-Stack Developer, Freelance</h3>
+                        <p>Shipped client applications in JavaScript, React, C# and .NET, with payment-gateway integrations, and cut page load times by 40%.</p>
+                    </li>
+                    <li>
+                        <p class="when">Jun 2022 to Jul 2022</p>
+                        <h3>Software Engineer Intern, Cogent</h3>
+                        <p>Built a C#/.NET module on the ABP Framework and helped set up a CI/CD pipeline that shortened the release cycle by 30%.</p>
+                    </li>
+                    <li>
+                        <p class="when">Jan 2021 to Nov 2022</p>
+                        <h3>IT Tutor, University of Cape Town</h3>
+                        <p>Tutored commercial programming in C# and .NET systems development. My students had a 90% pass rate.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section" id="skills" aria-labelledby="skills-title">
+            <div class="wrap">
+                <h2 id="skills-title">Skills and education</h2>
+                <dl class="skills">
+                    <div><dt>Languages</dt><dd>C#, TypeScript, JavaScript, Python, SQL, PHP, HTML, CSS, C++</dd></div>
+                    <div><dt>Frameworks</dt><dd>.NET 8 and 10, ASP.NET Core, EF Core, React, Next.js, FastAPI, ABP Framework, Drupal 10, WordPress</dd></div>
+                    <div><dt>Cloud and DevOps</dt><dd>Azure Functions, Azure DevOps, CI/CD, Docker, Linux, Git</dd></div>
+                    <div><dt>Data</dt><dd>SQL Server, PostgreSQL, MySQL and MariaDB, SQLite, Redis, Tableau, Excel</dd></div>
+                    <div><dt>AI tools</dt><dd>Claude Code, local language models with LLamaSharp, Tesseract OCR</dd></div>
+                </dl>
+
+                <div class="two-col edu">
+                    <div>
+                        <h3 class="sub-title">Education</h3>
+                        <ul class="plain">
+                            <li><strong>MCom in Information Systems</strong>, University of Cape Town, 2025 to now. Research on DNS security knowledge, attitudes and practices.</li>
+                            <li><strong>BSc Honours in Information Technology</strong>, Richfield, 2023. Distinction for the dissertation on e-commerce adoption at Takealot.</li>
+                            <li><strong>BCom in Information Systems</strong>, University of Cape Town, 2022. Built a product recommendation model from Woolworths purchase history.</li>
+                            <li><strong>BCom in Accounting (CA stream)</strong>, University of Cape Town, 2017 to 2020.</li>
+                        </ul>
                     </div>
-                    <p class="tl-duration">July 2022 - June 2023</p>
-                    <h5>BSc Honours Degree in Information Technology<span> - Richfield</span></h5>
-                    <p>
-                        Research focused on examining the factors influencing the adoption of e-commerce. A case study of Takealot, South Africa.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-user-graduate"></i>
+                    <div>
+                        <h3 class="sub-title">Certifications</h3>
+                        <ul class="plain">
+                            <li>PL-600: Microsoft Power Platform Solution Architect</li>
+                            <li>Advanced Web APIs with .NET 6</li>
+                            <li>Programming in C# and C# Advanced Practices</li>
+                            <li>SOLID Programming Principles</li>
+                            <li>Drupal 9 and 10 Master</li>
+                            <li>Introduction to Responsible AI</li>
+                            <li>Technical Support Engineer</li>
+                        </ul>
                     </div>
-                    <p class="tl-duration">February 2020 - November 2021</p>
-                    <h5>BCom Degree in Information Systems<span> - University of Cape Town</span></h5>
-                    <p>
-                        Project on creating Machine Learning Model for recommending products based on purchase history from Woolworths.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <p class="tl-duration">February 2017 - November 2019</p>
-                    <h5>BCom Degree in Accounting (CA Stream)<span> - University of Cape Town</span></h5>
-                    <p>
-                        Focused on chartered accountancy, financial analysis, auditing, tax compliance and corporate governance.
-                    </p>
                 </div>
             </div>
         </section>
-        <section class="section sec3 portfolio" id="portfolio">
-            <div class="main-title">
-                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
+
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
+            <div class="wrap two-col">
+                <div>
+                    <h2 id="contact-title">Let's talk</h2>
+                    <p class="section-intro">I'm open to engineering roles, freelance builds and research collaborations.</p>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:mliloadrian17@gmail.com">mliloadrian17@gmail.com</a></li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+27639897930">+27 63 989 7930</a></li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Cape Town, South Africa</li>
+                        <li><i class="fab fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/adrian-mlilo/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/AdrianDrizzy" target="_blank" rel="noopener">GitHub</a></li>
+                    </ul>
+                </div>
+                <form id="contact-form" novalidate>
+                    <div class="field-row">
+                        <label>Name<input type="text" id="name" name="name" required autocomplete="name"></label>
+                        <label>Email<input type="email" id="email" name="email" required autocomplete="email"></label>
+                    </div>
+                    <label>Subject<input type="text" id="subject" name="subject" required></label>
+                    <label>Message<textarea id="message" name="message" rows="6" required></textarea></label>
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                    <p id="form-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
-            <p class="port-text">
-                Here is some of my work that I've done in various programming languages.
-            </p>
-            
-            <div class="portfolios">
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/MDKPRODUCTIONS.png" alt="MDK Productions Website">
-                    </div>
-                    <div class="hover-items">
-                        <h3>MDK Productions</h3>
-                        <div class="icons">
-                            <a href="https://mdkproductions.online/index.html" class="icon" target="_blank" rel="noopener">
-                                <i class="fas fa-globe"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/Bitou.png" alt="Bitou Municipality Website">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Bitou Municipality</h3>
-                        <div class="icons">
-                            <a href="https://www.bitou.gov.za/" class="icon" target="_blank" rel="noopener">
-                                <i class="fas fa-globe"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/Frost Freeze.png" alt="Frost Freeze Website">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Frost Freeze</h3>
-                        <div class="icons">
-                            <a href="https://frostfreeze.co.za/index.html" class="icon" target="_blank" rel="noopener">
-                                <i class="fas fa-globe"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/IceFlam.png" alt="IceFlam Website">
-                    </div>
-                    <div class="hover-items">
-                        <h3>IceFlam</h3>
-                        <div class="icons">
-                            <a href="https://www.iceflam.co.za/" class="icon" target="_blank" rel="noopener">
-                                <i class="fas fa-globe"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/Portfolio Website.png" alt="Adrian's Portfolio">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Portfolio Website</h3>
-                        <div class="icons">
-                            <a href="https://adrian-s-portfolio.vercel.app/index.html" class="icon" target="_blank" rel="noopener">
-                                <i class="fas fa-globe"></i>
-                            </a>
-                            <a href="https://github.com/AdrianDrizzy/Adrian-s-Portfolio" class="icon" target="_blank" rel="noopener">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/ImageGallery.png" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Image Gallery</h3>
-                        <div class="icons">
-                            <a href="https://github.com/AdrianDrizzy/Image-Gallery" class="icon" target="_blank" rel="noopener">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/PMCS.png" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Product Management System</h3>
-                        <div class="icons">
-                            <a href="https://github.com/AdrianDrizzy/ProductManagementSystem-CRUD-ML" class="icon" target="_blank" rel="noopener">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.youtube.com/watch?v=5MddWGOESJU&t=6s" class="icon" target="_blank" rel="noopener">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/carpool.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Commute App</h3>
-                        <div class="icons">
-                            <a href="https://github.com/AdrianDrizzy/Comute-" class="icon" target="_blank" rel="noopener">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/dvd.jpeg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>DVD Rental Application</h3>
-                        <div class="icons">
-                            <a href="https://github.com/AdrianDrizzy/DVD-Rental-Application" class="icon" target="_blank" rel="noopener">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> 
-       
-        <section class="section sec5 contact" id="contact">
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
-                </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        <h4>Contact me here</h4>
-                        <p>
-                            Feel free to reach out for collaboration, job opportunities, or just to say hi!
-                        </p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Location</span>
-                                </div>
-                                <p>
-                                    Observatory, Cape Town, South Africa
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
-                                <p>
-                                    <span>: mliloadrian17@gmail.com</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Education</span>
-                                </div>
-                                <p>
-                                    <span>: University of Cape Town</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-phone"></i>
-                                    <span>Mobile Number</span>
-                                </div>
-                                <p>
-                                    <span>: +27605679307</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span>Languages</span>
-                                </div>
-                                <p>
-                                    <span>: English, Ndebele</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="contact-icons">
-                            <div class="contact-icon">
-                                <a href="https://www.linkedin.com/in/adrian-mlilo/" target="_blank" rel="noopener">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="https://github.com/AdrianDrizzy" target="_blank" rel="noopener">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.researchgate.net/" target="_blank" rel="noopener">
-                                    <i class="fas fa-book"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right-contact">
-                        <form id="contact-form"> 
-                            <div class="input-control i-c-2">
-                                <input type="text" id="name" required placeholder="YOUR NAME" name="name">
-                                <input type="email" id="email" required placeholder="YOUR EMAIL" name="email">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" id="subject" required placeholder="ENTER SUBJECT" name="subject">
-                            </div>
-                            <div class="input-control">
-                                <textarea id="message" name="message" cols="15" rows="6" placeholder="Message Here..." required></textarea>
-                            </div> 
-                            <div class="submit-btn">
-                                <input type="submit" value="Submit" class="send-btn">
-                                <a href="https://drive.google.com/file/d/1kP7TT0qEgmuf_K6eI0iifmODbpu_y0YN/view?usp=sharing" class="main-btn" target="_blank" rel="noopener">
-                                    <span class="btn-text">Download CV</span>
-                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
-                                </a>
-                            </div>
-                            <div id="form-status"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section> 
-    </main> 
-    <div class="controls">
-        <div class="control control-1 active-btn" data-id="home">
-            <i class="fas fa-home"></i>
-            <span class="control-text">Home</span>
-        </div>
-        <div class="control control-2" data-id="about">
-            <i class="fas fa-user"></i> 
-            <span class="control-text">About</span>
-        </div>
-        <div class="control control-3" data-id="portfolio">
-            <i class="fas fa-briefcase"></i> 
-            <span class="control-text">Portfolio</span>
-        </div>
-        <div class="control control-5" data-id="contact">
-            <i class="fas fa-envelope"></i> 
-            <span class="control-text">Contact</span>
-        </div>
-    </div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-        <span class="theme-text">Dark Mode</span>
-    </div>
-    <script src="styles/app.js"></script>
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // Display sending status
-            document.getElementById('form-status').innerHTML = '<p style="color: var(--color-secondary);">Sending message...</p>';
-            
-            // Get form data
-            const nameInput = document.getElementById('name');
-            const emailInput = document.getElementById('email');
-            const subjectInput = document.getElementById('subject');
-            const messageInput = document.getElementById('message');
-            
-            // Validate form data
-            if (!nameInput.value || !emailInput.value || !subjectInput.value || !messageInput.value) {
-                document.getElementById('form-status').innerHTML = '<p style="color: red;">Please fill in all fields.</p>';
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(emailInput.value)) {
-                document.getElementById('form-status').innerHTML = '<p style="color: red;">Please enter a valid email address.</p>';
-                return;
-            }
-            
-            // Prepare template parameters
-            const templateParams = {
-                from_name: nameInput.value.trim(),
-                email_id: emailInput.value.trim(),
-                subject: subjectInput.value.trim(),
-                message: messageInput.value.trim()
-            };
-            
-            // Send email using EmailJS
-            emailjs.send('service_smka4zt', 'template_ufqu2tj', templateParams, 'F55z98qKXVNv5QcBt')
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    document.getElementById('form-status').innerHTML = '<p style="color: var(--color-secondary);">Message sent successfully!</p>';
-                    
-                    // Clear the form
-                    nameInput.value = '';
-                    emailInput.value = '';
-                    subjectInput.value = '';
-                    messageInput.value = '';
-                    
-                    // Redirect to thanks page
-                    setTimeout(function() {
-                        window.location.href = "thanks.html";
-                    }, 2000);
-                })
-                .catch(function(error) {
-                    console.error('FAILED...', error);
-                    document.getElementById('form-status').innerHTML = '<p style="color: red;">Failed to send message. Please try again later or contact me directly at mliloadrian17@gmail.com</p>';
-                });
-        });
-    </script>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">Adrian Mlilo, Cape Town</div>
+    </footer>
 </body>
 </html>
